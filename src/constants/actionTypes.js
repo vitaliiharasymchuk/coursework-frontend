@@ -1,0 +1,19 @@
+//AUTH/LOGOUT
+export const AUTH = 'AUTH';
+export const LOGOUT = 'LOGOUT';
+
+//ALL ROLES
+export const FETCH_COURSES = 'FETCH_COURSES';
+
+//TEACHER
+export const ADD_QUESTION = 'ADD_QUESTION';
+
+//STUDENT
+export const GENERATE_TICKET = 'GENERATE_TICKET';
+
+//ADMIN
+export const FETCH_USERS = 'FETCH_USERS';
+export const FETCH_STUDENTS = 'FETCH_STUDENTS';
+export const CREATE_COURSE = 'CREATE_COURSE';
+export const CONNECT_STUDENT_TO_COURSE = 'CONNECT_STUDENT_TO_COURSE';
+
