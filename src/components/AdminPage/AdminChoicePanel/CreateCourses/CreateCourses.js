@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import Navbar from '../../../Navbar/Navbar';
 import Form from './Form/Form';
 import CoursesList from '../CoursesList/CoursesList';
-import { getCourses } from '../../../../actions/adminActions';
+import { getCourses, getUsers } from '../../../../actions/adminActions';
 
 
 const CreateCourses = () => {
@@ -17,6 +17,7 @@ const CreateCourses = () => {
 
     useEffect(() => {
         dispatch(getCourses());
+        dispatch(getUsers());
     }, [dispatch]);
 
     return (

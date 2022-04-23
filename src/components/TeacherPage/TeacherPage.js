@@ -9,22 +9,12 @@ const TeacherPage = () => {
         return JSON.parse(localStorage.getItem('profile'));
     }
 
-    
-
     return (
         verify()?.result.role === 'teacher' ?
             <div>
                 <Navbar />
                 <TeacherForm />
             </div>
-
-
-
-
-
-
-
-
             : <Redirect to='/' />
     );
 }

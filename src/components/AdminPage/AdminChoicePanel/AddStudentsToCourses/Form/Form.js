@@ -27,7 +27,7 @@ const Form = () => {
             dispatch(getStudents());
             dispatch(getCourses());
         }
-    }, []);
+    }, [dispatch]);
 
 
     const handleSubmit = async (e) => {
@@ -45,11 +45,11 @@ const Form = () => {
         <div>
             <Paper className={classes.paper} elevation={6}>
                 <form autoComplete="off" className={`${classes.root} ${classes.form}`} onSubmit={handleSubmit}>
-                    <Typography variant="h6">Connect students to course</Typography>
+                    <Typography variant="h6">Підключити студента до курсу : </Typography>
                     <Grid item xs={12} >
                         <Box sx={{ minWidth: 120 }} className={classes.box}>
                             <FormControl fullWidth>
-                                <InputLabel id="demo-simple-select-label">Student</InputLabel>
+                                <InputLabel id="demo-simple-select-label">Студент</InputLabel>
                                 <Select
                                     name="student"
                                     labelId="demo-simple-select-label"
@@ -67,8 +67,8 @@ const Form = () => {
                         </Box>
                         <Box sx={{ minWidth: 120 }} className={classes.box}>
                             <FormControl fullWidth>
-                                <InputLabel id="demo-simple-select-label">Course</InputLabel>
-                                <Select
+                                <InputLabel id="demo-simple-select-label">Курс</InputLabel>
+                                <Select sx={{ minWidth: 120 }}
                                     name="course"
                                     labelId="demo-simple-select-label"
                                     id="demo-simple-select"
@@ -84,10 +84,10 @@ const Form = () => {
                             </FormControl>
                         </Box>
                     </Grid>
-                    <Button type="submit" fullWidth variant="contained" color="primary" className={classes.button}>
-                        Connect student to course
+                    <Button type="submit" fullWidth variant="contained" color="primary" size="large" className={classes.button}>
+                        Підключити студента до курсу
                     </Button>
-                    <Button variant="contained" color="secondary" size="small" onClick={clear} fullWidth className={classes.button}>Clear</Button>
+                    <Button variant="contained" color="secondary" size="large" onClick={clear} fullWidth className={classes.button}>Очистити поля вводу</Button>
                 </form>
             </Paper>
         </div>

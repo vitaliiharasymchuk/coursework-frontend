@@ -11,16 +11,16 @@ export const getCourses = () => async (dispatch) => {
     }
 }
 
-export const generateTicket = (course_id) => async (dispatch) => {
+export const generateTicket = (course_id, user_id) => async (dispatch) => {
     try {
+        const { data } = await api.generateTicket(course_id, user_id);
 
-        const { data } = await api.generateTicket(course_id);
-
-        console.log(data);
 
         dispatch({ type: GENERATE_TICKET, payload: data });
 
+        return data;
+
     } catch (error) {
-        console.log(error.message);
+        return error.response?.data.message;
     }
 }

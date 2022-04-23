@@ -7,6 +7,7 @@ export default makeStyles((theme) => ({
         },
     },
     paper: {
+        marginBottom: '10px',
         padding: theme.spacing(2),
         width: '80%',
         marginLeft: 'auto',
@@ -29,8 +30,5 @@ export default makeStyles((theme) => ({
     },
     textField: {
         marginBottom: '20px'
-    },
-    typography: {
-        color: 'red'
     }
 }));

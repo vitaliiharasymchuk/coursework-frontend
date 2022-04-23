@@ -9,10 +9,14 @@ export default makeStyles((theme) => ({
         justifyContent: 'space-around',
         flexDirection: 'column'
     },
-    smMargin: {
-        margin: theme.spacing(1),
+    paper: {
+        padding: theme.spacing(2),
+        width: '80%',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        marginTop: '40px'
     },
-    actionDiv: {
-        textAlign: 'center',
+    list: {
+        minWidth: "100%"
     },
 }));

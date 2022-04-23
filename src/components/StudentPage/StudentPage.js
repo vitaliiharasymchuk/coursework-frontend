@@ -15,20 +15,6 @@ const StudentPage = () => {
                 <Navbar />
                 <StudentsForm />
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             : <Redirect to='/' />
     );
 }

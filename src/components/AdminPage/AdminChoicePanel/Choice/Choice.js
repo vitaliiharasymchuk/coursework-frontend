@@ -13,13 +13,13 @@ const Choice = ({ type }) => {
 
     const handleClick = () => {
         switch (type) {
-            case 'Modify system users':
+            case 'Редагувати користувачів системи':
                 history.push(`admin/modify_system_users`);
                 break;
-            case 'Create courses':
+            case 'Створити курси':
                 history.push(`admin/create_courses`);
                 break;
-            case 'Add students to courses':
+            case 'Підключити студентів до курсів':
                 history.push(`admin/add_students_to_courses`);
                 break;
             default:

@@ -1,9 +1,11 @@
-import { FETCH_USERS, FETCH_STUDENTS, FETCH_COURSES, CREATE_COURSE } from "../constants/actionTypes";
+import { FETCH_USERS, DELETE_USER, FETCH_STUDENTS, FETCH_COURSES, CREATE_COURSE } from "../constants/actionTypes";
 
-export default (state = { users: [], students: [], courses: [] }, action) => {
+const adminReducer = (state = { users: [], students: [], courses: [] }, action) => {
     switch (action.type) {
         case FETCH_USERS:
             return { ...state, users: action.payload.users };
+        case DELETE_USER:
+            return { ...state, users: state.users.filter((user) => user._id !== action.payload) };
         case FETCH_STUDENTS:
             return { ...state, students: action.payload.students };
         case FETCH_COURSES:
@@ -13,5 +15,6 @@ export default (state = { users: [], students: [], courses: [] }, action) => {
         default:
             return state;
     }
-
 }
+
+export default adminReducer;
